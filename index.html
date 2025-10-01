@@ -14,12 +14,17 @@
   <header>
     <nav>
       <h1>Aqualogic</h1>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#tecnologia">Tecnologia</a></li>
-        <li><a href="#demo">Demonstração</a></li>
-        <li><a href="#equipa">Equipa</a></li>
-      </ul>
+      <div class="burger" id="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#tecnologia">Tecnologia</a></li>
+      <li><a href="#demo">Demonstração</a></li>
+      <li><a href="#equipa">Equipa</a></li>
+    </ul>
     </nav>
   </header>
 
@@ -62,12 +67,38 @@
   </section>
 
   <!-- Equipe -->
-  <section id="equipa">
-    <h2>A Equipa</h2>
+<section id="equipa">
+  <h2>A nossa Equipa</h2>
     <p>Somos uma equipa de estudantes do secundário fascinados por Física e Tecnologias de Informação, 
-a trabalhar no desenvolvimento do projeto Aqualogic como parte das disciplinas escolares.</p>
-  </section>
+a trabalhar no desenvolvimento do projeto Aqualogic como parte das disciplinas escolares.</p><br>
+  <div class="equipa-container">
+    
+    <div class="equipa-member">
+      <img src="membro1.png" style="padding: 10px" alt="Filipe Rodrigues">
+      <h3>Filipe Rodrigues</h3>
+      <p></p>
+    </div>
+    
+    <div class="equipa-member">
+      <img src="membro1.png" style="padding: 10px" alt="Gonçalo Couto">
+      <h3>Gonçalo Couto</h3>
+      <p></p>
+    </div>
+    
+    <div class="equipa-member">
+      <img src="membro1.png" style="padding: 10px" alt="Luís Tavares">
+      <h3>Luís Tavares</h3>
+      <p></p>
+    </div>
 
+    <div class="equipa-member">
+      <img src="membro4.jpg" alt="Luís Morais">
+      <h3>Luís Morais</h3>
+      <p></p>
+    </div>
+
+  </div>
+</section>
   <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Projeto Aqualogic</p>
@@ -75,6 +106,15 @@ a trabalhar no desenvolvimento do projeto Aqualogic como parte das disciplinas e
 
   <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
   <script>
     const ctx = document.getElementById('hydrationChart').getContext('2d');
     new Chart(ctx, {
@@ -88,6 +128,7 @@ a trabalhar no desenvolvimento do projeto Aqualogic como parte das disciplinas e
         }]
       }
     });
+
   </script>
 </body>
 </html>

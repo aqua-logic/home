@@ -209,3 +209,105 @@ nav h1 {
     gap: 0.8em;
   }
 }
+
+#equipa {
+  padding: 3em 1em;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+#equipa h2 {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+.equipa-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.equipa-member {
+  flex: 1 1 220px;
+  max-width: 250px;
+  text-align: center;
+}
+/* Base nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5em;
+  list-style: none;
+}
+
+/* Burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* hide by default */
+    text-align: center;
+    background-color: #0a3d62;
+    padding: 1em 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  nav a {
+    padding: 0.5em 0;
+  }
+}
+
+.equipa-member img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;        /* Fotos circulares */
+  border: 4px solid #0a3d62; /* Borda elegante */
+  margin-bottom: 1em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.equipa-member h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.equipa-member p {
+  font-size: 0.9em;
+  line-height: 1.4;
+  color: #555;
+}
+

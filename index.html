@@ -1,69 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aqualogic – Hydration Sensing</title>
+  <title>Aqualogic – Medição de Hidratação</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- Navegação -->
   <header>
     <nav>
       <h1>Aqualogic</h1>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#tech">Technology</a></li>
-        <li><a href="#demo">Demo</a></li>
-        <li><a href="#team">Team</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#tecnologia">Tecnologia</a></li>
+        <li><a href="#demo">Demonstração</a></li>
+        <li><a href="#equipe">Equipe</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="hero">
-    <h2>Measuring Hydration Smarter</h2>
-    <p>Combining electrical and optical sensing with AI to estimate skin hydration in real time.</p>
-    <a href="#demo" class="btn">See How It Works</a>
+    <h2>Medição de Hidratação Inteligente</h2>
+    <p>Combinando sensores elétricos e ópticos com IA para estimar a hidratação da pele em tempo real.</p>
+    <a href="#demo" class="btn">Ver Como Funciona</a>
   </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Aqualogic</h2>
+  <!-- Sobre -->
+  <section id="sobre">
+    <h2>Sobre o Aqualogic</h2>
     <p>
-      Human skin hydration influences both health and performance. 
-      Our solution leverages the fact that water in the skin contains 
-      electrolytes (affecting resistivity) and near-infrared absorption 
-      bands (affecting light transmission). 
+      A hidratação da pele humana influencia tanto a saúde quanto o desempenho. 
+      Nossa solução aproveita o fato de que a água na pele contém 
+      eletrólitos (afetando a resistividade) e bandas de absorção no infravermelho próximo 
+      (afetando a transmissão de luz). 
     </p>
   </section>
 
-  <!-- Technology -->
-  <section id="tech">
-    <h2>Technology</h2>
+  <!-- Tecnologia -->
+  <section id="tecnologia">
+    <h2>Tecnologia</h2>
     <ul>
-      <li><strong>Electrical Sensing:</strong> Ohmmeter to measure resistivity via skin electrolytes.</li>
-      <li><strong>Optical Sensing:</strong> Laser + photodetector to capture near-infrared absorption bands.</li>
-      <li><strong>AI Integration:</strong> Mobile app processes sensor data to estimate hydration more accurately.</li>
+      <li><strong>Sensoriamento Elétrico:</strong> Ohmímetro para medir a resistividade através dos eletrólitos da pele.</li>
+      <li><strong>Sensoriamento Óptico:</strong> Laser + fotodetector para capturar as bandas de absorção no infravermelho próximo.</li>
+      <li><strong>Integração com IA:</strong> Aplicativo móvel processa os dados dos sensores para estimar a hidratação com mais precisão.</li>
     </ul>
   </section>
 
-  <!-- Demo / Data -->
+  <!-- Demonstração -->
   <section id="demo">
-    <h2>Data Visualization</h2>
-    <p>Sample output of hydration tracking:</p>
+    <h2>Visualização de Dados</h2>
+    <p>Exemplo de saída do acompanhamento da hidratação:</p>
     <canvas id="hydrationChart" width="400" height="200"></canvas>
   </section>
 
-  <!-- Team -->
-  <section id="team">
-    <h2>Our Team</h2>
-    <p>We’re a multidisciplinary team of engineers and scientists passionate about health-tech innovation.</p>
+  <!-- Equipe -->
+  <section id="equipe">
+    <h2>Nossa Equipe</h2>
+    <p>Somos uma equipe multidisciplinar de engenheiros e cientistas apaixonados por inovação em health-tech.</p>
   </section>
 
-  <!-- Footer -->
+  <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 Aqualogic Project</p>
+    <p>&copy; 2025 Projeto Aqualogic</p>
   </footer>
 
   <!-- JavaScript -->
@@ -73,9 +73,9 @@
     new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4'],
+        labels: ['Dia 1', 'Dia 2', 'Dia 3', 'Dia 4'],
         datasets: [{
-          label: 'Hydration Estimate (%)',
+          label: 'Estimativa de Hidratação (%)',
           data: [55, 60, 62, 58],
           borderWidth: 2
         }]

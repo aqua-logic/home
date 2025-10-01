@@ -1,1 +1,86 @@
-<h1 style="font-family: 'Courier New', Courier, monospace; color:#87CEEB">Aqualogic</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aqualogic – Hydration Sensing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <h1>Aqualogic</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#tech">Technology</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h2>Measuring Hydration Smarter</h2>
+    <p>Combining electrical and optical sensing with AI to estimate skin hydration in real time.</p>
+    <a href="#demo" class="btn">See How It Works</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Aqualogic</h2>
+    <p>
+      Human skin hydration influences both health and performance. 
+      Our solution leverages the fact that water in the skin contains 
+      electrolytes (affecting resistivity) and near-infrared absorption 
+      bands (affecting light transmission). 
+    </p>
+  </section>
+
+  <!-- Technology -->
+  <section id="tech">
+    <h2>Technology</h2>
+    <ul>
+      <li><strong>Electrical Sensing:</strong> Ohmmeter to measure resistivity via skin electrolytes.</li>
+      <li><strong>Optical Sensing:</strong> Laser + photodetector to capture near-infrared absorption bands.</li>
+      <li><strong>AI Integration:</strong> Mobile app processes sensor data to estimate hydration more accurately.</li>
+    </ul>
+  </section>
+
+  <!-- Demo / Data -->
+  <section id="demo">
+    <h2>Data Visualization</h2>
+    <p>Sample output of hydration tracking:</p>
+    <canvas id="hydrationChart" width="400" height="200"></canvas>
+  </section>
+
+  <!-- Team -->
+  <section id="team">
+    <h2>Our Team</h2>
+    <p>We’re a multidisciplinary team of engineers and scientists passionate about health-tech innovation.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Aqualogic Project</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('hydrationChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4'],
+        datasets: [{
+          label: 'Hydration Estimate (%)',
+          data: [55, 60, 62, 58],
+          borderWidth: 2
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

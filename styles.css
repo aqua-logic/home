@@ -184,3 +184,28 @@ section:nth-of-type(even) {
   max-width: 900px; /* match your other sections */
   box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  flex-wrap: wrap; /* wrap items on smaller screens */
+  justify-content: center; /* center nav links on mobile */
+}
+
+nav h1 {
+  font-size: 1.6em;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.8em;
+  }
+}

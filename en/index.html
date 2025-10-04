@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aqualogic – Hydration Measurement</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navegação -->
+  <header>
+    <nav>
+         <details class="lang-dropdown">
+  <summary class="lang-btn">
+    <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+    <span class="lang-label">English</span>
+    <span class="caret" aria-hidden="true">▾</span>
+  </summary>
+
+  <div class="lang-menu" role="menu">
+    <!-- Fixed links — edit these per-page if you need path-preservation -->
+    <a class="lang-link" href="/en/" role="menuitem">🇬🇧 English</a>
+    <a class="lang-link" href="/" role="menuitem">🇵🇹 Português</a>
+  </div>
+</details>
+      <h1>Aqualogic</h1>
+      <div class="burger" id="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#sobre">About</a></li>
+      <li><a href="#tecnologia">Technology</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#equipa">Team</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <h2>Intelligent Hydration Measurement</h2>
+    <p>Combining electrical and optical sensors with AI to estimate skin hydration in real time.</p>
+    <a href="#demo" class="btn">See How It Works</a>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre">
+    <div class="section-content">
+    <h2>About Aqualogic</h2>
+    <p>
+      WHO recommends 2 liters of water daily. Dehydration causes decreased blood pressure, constipation, kidney problems, cramps, reduced performance in athletes and arrhythmias in the elderly. Excess intake causes nausea and wastes a vital resource. Based on the physical principle that water in the skin contains electrolytes that lower resistivity and has absorption bands in the near infrared, our solution aims to estimate the body's hydration. 
+      Because the skin's electrical conductivity varies between individuals, we add an important variable to our general model: body temperature, to detect the presence of sweat. On the other hand, we consider body mass irrelevant because the subcutaneous fat layer at the wrist is extremely thin. Later, our mobile app will collect binary feedback about the sensor measurements and thereby adapt the general model to each bracelet and user.
+    </p><br>
+  <img src="sdg3.png" style="padding:10px; max-width: 100px;" alt="SDG 3">
+  <img src="sdg6.png" style="padding:10px; max-width: 100px;" alt="SDG 6">
+  </div>
+  </section>
+
+  <!-- Tecnologia -->
+  <section id="tecnologia">
+    <h2>Partial problems</h2>
+    <ul>
+      <li><strong>Model training:</strong> Highly precise equipment such as a digital multimeter, a 970 nm LED, a photodiode and an infrared probe thermometer with automatic data acquisition will allow intensive training of our general AI model. After collecting 100–1000 data points, we will have a reliable estimate of how long any user went without drinking and how much water they consumed in the last hour.</li>
+      <li><strong>Bracelet prototype development:</strong> We will calibrate an Arduino NANO BLE connected to several small sensors to perform the same measurements and send data to the phone via Bluetooth.</li>
+      <li><strong>Mobile app development:</strong> Finally, the mobile app, automatically connected to the bracelet, will send alert notifications when the user hasn't drunk water for more than 2 hours or when they drank more than 1 liter in the last hour and will calculate an approximate hydration score and the percentile relative to the average of users.</li>
+    </ul>
+  </section>
+
+  <!-- Demonstração -->
+  <section id="demo">
+    <div class="section-content">
+    <h2>Data Visualization</h2>
+    <p>Example output from hydration tracking:</p>
+    <canvas id="hydrationChart" width="400" height="200"></canvas>
+    </div>
+  </section>
+
+  <!-- Equipe -->
+<section id="equipa">
+  <h2>Our Team</h2>
+    <p>We are a team of high-school students fascinated by Physics and Information Technologies, working on the development of the Aqualogic project as part of our school subjects.</p><br>
+  <div class="equipa-container">
+    
+    <div class="equipa-member">
+      <img src="membro1.png" style="padding: 10px" alt="Filipe Rodrigues">
+      <h3>Filipe Rodrigues</h3>
+      <p></p>
+    </div>
+    
+    <div class="equipa-member">
+      <img src="membro1.png" style="padding: 10px" alt="Gonçalo Couto">
+      <h3>Gonçalo Couto</h3>
+      <p></p>
+    </div>
+    
+    <div class="equipa-member">
+      <img src="membro1.png" style="padding: 10px" alt="Luís Tavares">
+      <h3>Luís Tavares</h3>
+      <p></p>
+    </div>
+
+    <div class="equipa-member">
+      <img src="membro4.jpg" alt="Luís Morais">
+      <h3>Luís Morais</h3>
+      <p></p>
+    </div>
+
+  </div>
+</section>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Aqualogic Project</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+  <script>
+    const ctx = document.getElementById('hydrationChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4'],
+        datasets: [{
+          label: 'User percentile (%)',
+          data: [55, 60, 62, 58],
+          borderWidth: 2
+        }]
+      }
+    });
+
+  </script>
+</body>
+</html>

@@ -13,6 +13,21 @@
   <!-- Navegação -->
   <header>
     <nav>
+ <details class="lang-dropdown">
+  <summary class="lang-btn">
+    <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+    <span class="lang-label">English</span>
+    <span class="caret" aria-hidden="true">▾</span>
+  </summary>
+
+  <div class="lang-menu" role="menu">
+    <!-- Fixed links — edit these per-page if you need path-preservation -->
+    <a class="lang-link" href="/en/" role="menuitem">🇬🇧 English</a>
+    <a class="lang-link" href="/" role="menuitem">🇵🇹 Português</a>
+  </div>
+</details>
+
+
       <h1>Aqualogic</h1>
       <div class="burger" id="burger">
       <div></div>
@@ -40,20 +55,28 @@
     <div class="section-content">
     <h2>Sobre o Aqualogic</h2>
     <p>
-      A hidratação da pele humana influencia tanto a saúde quanto o desempenho. 
-      A nossa solução aproveita o facto de que a água na pele contém 
-      eletrólitos (afetando a resistividade) e bandas de absorção no infravermelho próximo 
-      (afetando a transmissão de luz). 
-    </p></div>
+      A OMS recomenda 2 litros de água diários. A desidratação causa diminuição de pressão arterial,
+prisão de ventre, problemas renais, cãibras, queda do desempenho em atletas e arritmias em idosos.
+O excesso provoca náuseas e desperdiça um recurso vital. Baseada no princípio físico de que a água
+na pele contém eletrólitos que reduzem a resistividade e tem bandas de absorção no infravermelho
+próximo, a nossa solução pretende estimar a hidratação do organismo. 
+Como a condutividade elétrica da pele varia entre pessoas diferentes, acrescentamos uma variável importante ao nosso modelo geral: a temperatura
+corporal, para detetar a presença de suor. Por outro lado, consideramos que a massa corporal é irrelevante, porque a camada de gordura
+subcutânea no pulso é extremamente fina. Posteriormente, a nossa aplicação móvel permitirá reunir feedback binário sobre as medições do sensor e, 
+consequentemente, ajustar o modelo geral a cada pulseira e utilizador. 
+    </p><br>
+  <img src="ods3.jpg" style="padding:10px; max-width: 100px;">
+  <img src="ods6.jpg" style="padding:10px; max-width: 100px;">
+  </div>
   </section>
 
   <!-- Tecnologia -->
   <section id="tecnologia">
-    <h2>Tecnologia</h2>
+    <h2>Problemas parcelares</h2>
     <ul>
-      <li><strong>Sensores Elétricos:</strong> Ohmímetro para medir a resistividade através dos eletrólitos da pele.</li>
-      <li><strong>Sensores Óticos:</strong> Laser + fotodetetor para capturar as bandas de absorção no infravermelho próximo.</li>
-      <li><strong>Integração com IA:</strong> Aplicação móvel processa os dados dos sensores para estimar a hidratação com maior precisão.</li>
+      <li><strong>Treino do modelo:</strong>  Equipamentos altamente precisos como um multímetro digital, uma LED com comprimento de onda de 970 nanómetros, um fotodíodo e um termómetro de sonda de infravermelhos com aquisição automática de dados permitirão treinar intensivamente o nosso modelo geral de inteligência artificial. Após a recolha de 100-1000 data points, teremos uma estimativa fiável do tempo que qualquer utilizador dispendeu sem beber água e da quantidade de água que ingeriu na última hora.      
+      <li><strong>Desenvolvimento do protótipo da pulseira:</strong> Calibraremos um Arduino NANO BLE conectado a vários sensores de dimensões reduzidas para efetuar as mesmas medições e comunicar os dados ao telemóvel por Bluetooth.</li>
+      <li><strong>Desenvolvimento da aplicação móvel:</strong> Finalmente, a aplicação móvel, automaticamente conectada à pulseira, envia notificações de alerta quando o utilizador não bebe água há mais de 2 horas ou quando bebeu mais do que 1 litro na última hora e calcula uma pontuação de hidratação aproximada e o percentil relativamente à média dos utilizadores </li>
     </ul>
   </section>
 
@@ -122,7 +145,7 @@ a trabalhar no desenvolvimento do projeto Aqualogic como parte das disciplinas e
       data: {
         labels: ['Dia 1', 'Dia 2', 'Dia 3', 'Dia 4'],
         datasets: [{
-          label: 'Estimativa de Hidratação (%)',
+          label: 'Percentil do utilizador (%)',
           data: [55, 60, 62, 58],
           borderWidth: 2
         }]

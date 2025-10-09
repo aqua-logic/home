@@ -410,6 +410,28 @@ section::before {
   font-size: 1.2em;
   margin-bottom: 0.5em;
 }
+/* make nav a positioning context (it already is but be explicit) */
+nav { position: relative; }
+
+/* center the site title */
+nav h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;              /* remove default margins */
+  z-index: 1500;         /* above nav items if needed */
+  pointer-events: auto;  /* allow interactions if you make it a link later */
+}
+
+/* avoid overlap on very small screens: fall back to normal flow */
+@media (max-width: 520px) {
+  nav h1 {
+    position: static;
+    transform: none;
+    text-align: center;
+    width: 100%;
+  }
+}
 
 .equipa-member p {
   font-size: 0.9em;

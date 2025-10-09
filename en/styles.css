@@ -6,12 +6,97 @@
 
 body {
   margin: 0;
-  font-family: 'Lora', serif;
+  font-family: 'Varela Round', serif;
   line-height: 1.6;
   color: #222;
   background: #f0f4f8;
 }
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: inherit;
+}
 
+/* Style the summary like a nav button (no default marker / no big blue) */
+.lang-dropdown > summary {
+  list-style: none;            /* remove default marker in some browsers */
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: transparent;     /* inherits nav background */
+  color: inherit;              /* stop blue color */
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* Remove the triangle marker in WebKit */
+.lang-dropdown > summary::-webkit-details-marker { display: none; }
+/* In modern browsers: remove default marker */
+.lang-dropdown > summary::marker { content: none; }
+
+/* caret styling (small) */
+.lang-dropdown .caret { font-size: 0.75rem; opacity: .9; }
+
+/* Menu (hidden by default) */
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 160px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  background: var(--menu-bg, #fff); /* override if your nav is dark */
+  padding: 6px;
+  display: none;
+  z-index: 1200;
+}
+
+/* When details is open, show menu */
+.lang-dropdown[open] .lang-menu {
+  display: block;
+}
+
+/* Links: no blue, no underline — inherit nav colors */
+.lang-link {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: inherit;       /* prevents default blue */
+  border-radius: 6px;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+/* Hover / focus */
+.lang-link:hover,
+.lang-link:focus {
+  background: rgba(0,0,0,0.04);
+  outline: none;
+}
+
+/* Prevent :visited from changing color */
+.lang-link:visited { color: inherit; }
+
+/* Keyboard focus visible on the summary */
+.lang-dropdown > summary:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(34,139,230,0.08);
+  border-color: rgba(34,139,230,0.9);
+}
+
+/* Mobile: slightly smaller */
+@media (max-width: 520px) {
+  .lang-dropdown > summary { padding: 5px 8px; font-size: 0.9rem; }
+  .lang-menu { min-width: 140px; }
+}
 /* Header & Navigation */
 header {
   background: linear-gradient(90deg, #0a3d62, #3c6382);
@@ -147,7 +232,21 @@ ul li {
   display: block;
   margin: 1em auto 0 auto;
 }
+.lang-dropdown {
+  position: relative;
+  z-index: 2000; /* ensures it’s above nav and header */
+}
 
+.lang-menu {
+  background: #ffffff; /* make sure it’s visible on dark nav */
+  color: #000; /* dark text for contrast */
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.lang-link:hover {
+  background: rgba(0,0,0,0.08);
+}
 /* Footer */
 footer {
   text-align: center;
@@ -180,7 +279,7 @@ section:nth-of-type(even) {
   background: #fff;
   border-radius: 20px;
   margin: 2em auto; /* <-- auto centers horizontally */
-  padding: 3em 2em;
+  padding: 3em 4em;
   max-width: 900px; /* match your other sections */
   box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
@@ -210,92 +309,6 @@ nav h1 {
   }
 }
 
-.lang-dropdown {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: inherit;
-}
-
-/* Style the summary like a nav button (no default marker / no big blue) */
-.lang-dropdown > summary {
-  list-style: none;            /* remove default marker in some browsers */
-  -webkit-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 10px;
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.12);
-  background: transparent;     /* inherits nav background */
-  color: inherit;              /* stop blue color */
-  font-size: 0.95rem;
-  line-height: 1;
-}
-
-/* Remove the triangle marker in WebKit */
-.lang-dropdown > summary::-webkit-details-marker { display: none; }
-/* In modern browsers: remove default marker */
-.lang-dropdown > summary::marker { content: none; }
-
-/* caret styling (small) */
-.lang-dropdown .caret { font-size: 0.75rem; opacity: .9; }
-
-/* Menu (hidden by default) */
-.lang-menu {
-  position: absolute;
-  right: 0;
-  top: calc(100% + 8px);
-  min-width: 160px;
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  background: var(--menu-bg, #fff); /* override if your nav is dark */
-  padding: 6px;
-  display: none;
-  z-index: 1200;
-}
-
-/* When details is open, show menu */
-.lang-dropdown[open] .lang-menu {
-  display: block;
-}
-
-/* Links: no blue, no underline — inherit nav colors */
-.lang-link {
-  display: block;
-  padding: 8px 10px;
-  text-decoration: none;
-  color: inherit;       /* prevents default blue */
-  border-radius: 6px;
-  white-space: nowrap;
-  font-family: inherit;
-}
-
-/* Hover / focus */
-.lang-link:hover,
-.lang-link:focus {
-  background: rgba(0,0,0,0.04);
-  outline: none;
-}
-
-/* Prevent :visited from changing color */
-.lang-link:visited { color: inherit; }
-
-/* Keyboard focus visible on the summary */
-.lang-dropdown > summary:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(34,139,230,0.08);
-  border-color: rgba(34,139,230,0.9);
-}
-
-/* Mobile: slightly smaller */
-@media (max-width: 520px) {
-  .lang-dropdown > summary { padding: 5px 8px; font-size: 0.9rem; }
-  .lang-menu { min-width: 140px; }
-}
 #equipa {
   padding: 3em 1em;
   max-width: 1100px;
@@ -304,7 +317,7 @@ nav h1 {
 }
 
 #equipa h2 {
-  font-family: 'Lora', serif;
+  font-family: 'Varela Round', serif;
   font-size: 2em;
   margin-bottom: 1.5em;
 }
@@ -393,7 +406,7 @@ section::before {
 }
 
 .equipa-member h3 {
-  font-family: 'Lora', serif;
+  font-family: 'Varela Round', serif;
   font-size: 1.2em;
   margin-bottom: 0.5em;
 }

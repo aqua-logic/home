@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navegação -->
@@ -46,7 +46,7 @@
   <!-- Hero -->
   <section id="hero">
     <h2>Medição de Hidratação Inteligente</h2>
-    <p>Combinando sensores elétricos e óticos com IA para estimar a hidratação da pele em tempo real.</p>
+    <p>Combinando sensores mecânicos, elétricos e óticos com IA para estimar a hidratação da pele em tempo real.</p>
     <a href="#demo" class="btn">Ver Como Funciona</a>
   </section>
 
@@ -54,15 +54,19 @@
   <section id="sobre">
     <div class="section-content">
     <h2>Sobre o Aqualogic</h2>
-    <p>
+    <p style="text-align: justify;">
       A OMS recomenda 2 litros de água diários. A desidratação causa diminuição de pressão arterial,
 prisão de ventre, problemas renais, cãibras, queda do desempenho em atletas e arritmias em idosos.
 O excesso provoca náuseas e desperdiça um recurso vital. Baseada no princípio físico de que a água
 na pele contém eletrólitos que reduzem a resistividade e tem bandas de absorção no infravermelho
 próximo, a nossa solução pretende estimar a hidratação do organismo. 
 Como a condutividade elétrica da pele varia entre pessoas diferentes, acrescentamos uma variável importante ao nosso modelo geral: a temperatura
-corporal, para detetar a presença de suor. Por outro lado, consideramos que a massa corporal é irrelevante, porque a camada de gordura
-subcutânea no pulso é extremamente fina. Posteriormente, a nossa aplicação móvel permitirá reunir feedback binário sobre as medições do sensor e, 
+corporal, para detetar a presença de suor. Por outro lado, consideramos que a massa corporal é relevante, porque a camada de gordura
+subcutânea no pulso pode alterar a condutividade. Além dos métodos já descritos, a pulseira poderá também avaliar a hidratação com base na elasticidade cutânea. 
+Para isso, será integrada uma microestrutura flexível na parte interna da pulseira (fabricada em silicone), contendo um sensor piezoelétrico ou de pressão, que aplica uma 
+leve compressão na pele. O sistema mede a resposta de retorno (tempo e intensidade), permitindo determinar a elasticidade e, consequentemente, o grau de hidratação.
+Esta abordagem complementa as medições elétricas e óticas, oferecendo uma forma adicional e inovadora de estimar o estado de hidratação, 
+baseada nas propriedades biomecânicas da pele. Posteriormente, a nossa aplicação móvel permitirá reunir feedback binário sobre as medições do sensor e, 
 consequentemente, ajustar o modelo geral a cada pulseira e utilizador. 
     </p><br>
   <img src="ods3.jpg" style="padding:10px; max-width: 100px;">
@@ -74,7 +78,7 @@ consequentemente, ajustar o modelo geral a cada pulseira e utilizador.
   <section id="tecnologia">
     <h2>Problemas parcelares</h2>
     <ul>
-      <li><strong>Treino do modelo:</strong>  Equipamentos altamente precisos como um multímetro digital, uma LED com comprimento de onda de 970 nanómetros, um fotodíodo e um termómetro de sonda de infravermelhos com aquisição automática de dados permitirão treinar intensivamente o nosso modelo geral de inteligência artificial. Após a recolha de 100-1000 data points, teremos uma estimativa fiável do tempo que qualquer utilizador dispendeu sem beber água e da quantidade de água que ingeriu na última hora.      
+      <li><strong>Treino do modelo:</strong>  Equipamentos altamente precisos como um multímetro digital, sensor piezoelétrico, uma LED com comprimento de onda de 970 nanómetros, um fotodíodo e um termómetro de sonda de infravermelhos com aquisição automática de dados permitirão treinar intensivamente o nosso modelo geral de inteligência artificial. Após a recolha de 100-1000 data points, teremos uma estimativa fiável do tempo que qualquer utilizador dispendeu sem beber água e da quantidade de água que ingeriu na última hora.      
       <li><strong>Desenvolvimento do protótipo da pulseira:</strong> Calibraremos um Arduino NANO BLE conectado a vários sensores de dimensões reduzidas para efetuar as mesmas medições e comunicar os dados ao telemóvel por Bluetooth.</li>
       <li><strong>Desenvolvimento da aplicação móvel:</strong> Finalmente, a aplicação móvel, automaticamente conectada à pulseira, envia notificações de alerta quando o utilizador não bebe água há mais de 2 horas ou quando bebeu mais do que 1 litro na última hora e calcula uma pontuação de hidratação aproximada e o percentil relativamente aos restantes utilizadores. </li>
     </ul>

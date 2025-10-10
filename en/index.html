@@ -53,11 +53,9 @@
     <div class="section-content">
     <h2>About Aqualogic</h2>
     <p style="text-align: justify;">
-      WHO recommends 2 liters of water daily. Dehydration causes decreased blood pressure, constipation, kidney problems, cramps, reduced performance in athletes and arrhythmias in the elderly. Excess intake causes nausea and wastes a vital resource. Based on the physical principle that water in the skin contains electrolytes that lower resistivity and has absorption bands in the near infrared, our solution aims to estimate the body's hydration. 
-      Because the skin's electrical conductivity varies between individuals, we add an important variable to our general model: body temperature, to detect the presence of sweat. On the other hand, we consider body mass relevant because the subcutaneous fat layer at the wrist decreases the electrical condutivity of the skin. In addition to the methods already described, the wristband could also assess hydration based on skin elasticity. To achieve this, 
-      a flexible microstructure will be integrated into the inner part of the wristband (made of silicone), containing a piezoelectric or pressure sensor that applies a slight compression to the skin. The system measures the return response (time and intensity), allowing the determination of elasticity and, consequently, the level of hydration.
-      This approach complements the electrical and thermal measurements, offering an additional and innovative way to estimate the hydration state based on the biomechanical properties of the skin. Later, our mobile 
-      app will collect binary feedback about the sensor measurements and thereby adapt the general model to each bracelet and user.
+The World Health Organisation recommends approximately 2 litres of water per day. Both insufficient and excessive intake affect health, ranging from a drop in blood pressure, kidney problems and constipation to muscle cramps, reduced sporting performance and an increased risk of arrhythmias in older adults. We propose a wearable band that estimates hydration status through electrical and optical measurements together with physiological variables, all integrated into machine learning models.
+On the electrical side, the presence of water and electrolytes on the skin surface alters resistivity. We will measure skin resistance with contact electrodes and use variations in kilohms as input to the model. In the optical domain, a 970 nm emitter and a photodiode make it possible to calculate a local absorption coefficient using the Beer-Lambert law, which indicates the amount of water in superficial tissues. In addition to the methods already described, the wristband could also assess hydration based on skin elasticity. To this end, a flexible microstructure will be integrated into the inner part of the wristband (made of silicone), containing a piezoelectric or pressure sensor that applies a slight compression to the skin. The system measures the return response (time and intensity), allowing the determination of elasticity and, consequently, the level of hydration. These readings help to distinguish transient changes, such as sweat, from genuine variations in body water status.
+The overall model will be trained using regressions that relate resistance, absorption coefficient, estimated elasticity, temperature and body mass to the time since the last intake and the volume ingested. This will allow personalised alerts for fluid deficit or excess. Combining electrical and optical signals, corrected for temperature and body mass, provides a robust basis for inferring hydration status and reducing false positives caused by sweat or anatomical differences. Subsequently, our mobile application will collect binary feedback on the sensor measurements and will adjust the general model for each wristband and user.
     </p><br>
   <img src="sdg3.png" style="padding:10px; max-width: 100px;" alt="SDG 3">
   <img src="sdg6.png" style="padding:10px; max-width: 100px;" alt="SDG 6">
@@ -90,19 +88,19 @@
   <div class="equipa-container">
     
     <div class="equipa-member">
-      <img src="membro1.png" style="padding: 10px" alt="Filipe Rodrigues">
+      <img src="membro1.jpg" style="padding: 10px" alt="Filipe Rodrigues">
       <h3>Filipe Rodrigues</h3>
       <p></p>
     </div>
     
     <div class="equipa-member">
-      <img src="membro1.png" style="padding: 10px" alt="Gonçalo Couto">
+      <img src="membro2.png" style="padding: 10px" alt="Gonçalo Couto">
       <h3>Gonçalo Couto</h3>
       <p></p>
     </div>
     
     <div class="equipa-member">
-      <img src="membro1.png" style="padding: 10px" alt="Luís Tavares">
+      <img src="membro3.png" style="padding: 10px" alt="Luís Tavares">
       <h3>Luís Tavares</h3>
       <p></p>
     </div>

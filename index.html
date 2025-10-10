@@ -55,19 +55,15 @@
     <div class="section-content">
     <h2>Sobre o Aqualogic</h2>
     <p style="text-align: justify;">
-      A OMS recomenda 2 litros de água diários. A desidratação causa diminuição de pressão arterial,
-prisão de ventre, problemas renais, cãibras, queda do desempenho em atletas e arritmias em idosos.
-O excesso provoca náuseas e desperdiça um recurso vital. Baseada no princípio físico de que a água
-na pele contém eletrólitos que reduzem a resistividade e tem bandas de absorção no infravermelho
-próximo, a nossa solução pretende estimar a hidratação do organismo. 
-Como a condutividade elétrica da pele varia entre pessoas diferentes, acrescentamos uma variável importante ao nosso modelo geral: a temperatura
-corporal, para detetar a presença de suor. Por outro lado, consideramos que a massa corporal é relevante, porque a camada de gordura
-subcutânea no pulso pode alterar a condutividade. Além dos métodos já descritos, a pulseira poderá também avaliar a hidratação com base na elasticidade cutânea. 
-Para isso, será integrada uma microestrutura flexível na parte interna da pulseira (fabricada em silicone), contendo um sensor piezoelétrico ou de pressão, que aplica uma 
-leve compressão na pele. O sistema mede a resposta de retorno (tempo e intensidade), permitindo determinar a elasticidade e, consequentemente, o grau de hidratação.
-Esta abordagem complementa as medições elétricas e óticas, oferecendo uma forma adicional e inovadora de estimar o estado de hidratação, 
-baseada nas propriedades biomecânicas da pele. Posteriormente, a nossa aplicação móvel permitirá reunir feedback binário sobre as medições do sensor e, 
-consequentemente, ajustar o modelo geral a cada pulseira e utilizador. 
+ 
+A Organização Mundial da Saúde recomenda cerca de 2 L de água por dia. Tanto a insuficiência como o excesso de ingestão afetam a saúde desde queda da pressão arterial, problemas renais e prisão de ventre até cãibras, menor desempenho desportivo e risco de arritmias em idosos. Propomos uma pulseira que estima o estado de hidratação através de medições elétricas, óticas e variáveis fisiológicas, integradas em modelos de aprendizagem automática.
+
+Na vertente elétrica, uma vez que a presença de água e eletrólitos na superfície cutânea altera a resistividade, mediremos a resistência da pele em kiloohms com elétrodos como entrada do modelo. No domínio ótico, um emissor de 970 nm e um fotodíodo permitem calcular um coeficiente de absorção pela lei de Beer–Lambert, indicador da água nos tecidos superficiais. Além dos métodos já descritos, a pulseira poderá também avaliar a hidratação com base na elasticidade cutânea. Para isso, será integrada uma microestrutura flexível na parte interna da pulseira (fabricada em silicone), contendo um sensor piezoelétrico ou de pressão, que aplica uma leve compressão na pele. O sistema mede a resposta de retorno (tempo e intensidade), permitindo determinar a elasticidade. Estas leituras ajudam a distinguir alterações transitórias (por exemplo, suor) de variações reais do estado hídrico.
+
+
+O modelo geral será treinado com regressões que relacionam resistência, coeficiente de absorção, elasticidade estimada, temperatura e massa com o tempo desde a última ingestão e o volume ingerido, permitindo gerar alertas personalizados de défice ou excesso hídrico. A combinação de sinais elétricos e óticos, corrigida por temperatura e massa corporal, cria uma base robusta para inferir o estado de hidratação e reduzir falsos positivos provocados pelo suor ou diferenças anatómicas. Posteriormente, a nossa aplicação móvel permitirá reunir feedback binário sobre as medições do sensor e, consequentemente, ajustar o modelo geral a cada pulseira e utilizador.
+
+
     </p><br>
   <img src="ods3.jpg" style="padding:10px; max-width: 100px;">
   <img src="ods6.jpg" style="padding:10px; max-width: 100px;">
@@ -101,19 +97,19 @@ a trabalhar no desenvolvimento do projeto Aqualogic como parte das disciplinas e
   <div class="equipa-container">
     
     <div class="equipa-member">
-      <img src="membro1.png" style="padding: 10px" alt="Filipe Rodrigues">
+      <img src="membro1.jpg" alt="Filipe Rodrigues">
       <h3>Filipe Rodrigues</h3>
       <p></p>
     </div>
     
     <div class="equipa-member">
-      <img src="membro1.png" style="padding: 10px" alt="Gonçalo Couto">
+      <img src="membro2.jpg" alt="Gonçalo Couto">
       <h3>Gonçalo Couto</h3>
       <p></p>
     </div>
     
     <div class="equipa-member">
-      <img src="membro1.png" style="padding: 10px" alt="Luís Tavares">
+      <img src="membro3.jpg" alt="Luís Tavares">
       <h3>Luís Tavares</h3>
       <p></p>
     </div>

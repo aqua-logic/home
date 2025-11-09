@@ -27,7 +27,13 @@ https://aguadatorneira.pt/consumos-e-pegadas/
 ### Que outras soluções semelhantes existem
 O dispositivo mais comum para avaliação da hidratação da pele é o corneómetro, que mede as propriedades elétricas da pele (bioimpedância) que variam consoante os níveis de teor da  água. Este instrumento tipicamente apresenta uma configuração de dois elétrodos (bipolar) ligada à pele, que está sujeita a erros de contacto, pois a dupla camada elétrodo-eletrólito introduz uma impedância de contacto que interfere significativamente no valor medido. Por outro lado, outra categoria de métodos unimodais utilizados tradicionalmente baseia-se no sensoriamento ótico. A deteção das bandas coincidentes com os picos de absorção da água, especialmente em 970 nm e 1450 nm, permitem efetuar assim uma medição indireta do teor de água. Enquanto que o comprimento de onda de 1450 nm tem absorção mais forte pela água, tem menor poder de penetração na pele e maior sensibilidade a dispersão do que 970 nm. Portanto, quando se combinam os dois comprimentos de onda, é possível estimar o conteúdo de água superficial com confiança.
 
+<img src="timeline.png">
+
 No entanto, já existem trabalhos académicos que mostram o desenvolvimento e avaliação de sensores multimodais destinados à avaliação altamente precisa da hidratação da pele, que superam as imprecisões e limitações inerentes aos métodos padrão. O sistema proposto utiliza uma abordagem multimodal, que combina sensores elétricos com sensores óticos. A técnica de bioimpedância tetrapolar é implementada para mitigar o impacto da impedância de contacto e eliminar erros associados à dupla camada elétrodo-eletrólito. Adicionalmente, o sensor ótico permite a deteção direta das bandas associadas à água. A combinação de ambas as modalidades visa aumentar a sensibilidade e a validade das medições e fornecer uma ferramenta mais robusta e abrangente para a medição do estado de desidratação da pele. Utilizando a 
+
+
+https://www.courage-khazaka.com/en/scientific-products/cutometer-dual-mpa-580
+
 
 ### O que distingue o nosso protótipo das soluções semelhantes existentes
 <ul>

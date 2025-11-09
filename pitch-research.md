@@ -13,7 +13,7 @@ Um estudo conjunto da iniciativa Liq.In7, que incluiu 3611 crianças, 8109 adole
 </ul>
 Por outro lado, no mercado português, foram produzidas 911 milhões de embalagens de plástico para comercialização de água engarrafada, no mercado nacional, sendo que cada garrafa de água tem uma pegada de carbono de 85 gramas de $CO_2$. Ainda assim, entre 2014 e 2019, o consumo de água engarrafada per capita aumentou cerca de 30%. 
 
-<br><br>
+<br>
 Fontes: <br>
 https://karger.com/anm/article/68/Suppl.%202/12/43407/Harmonized-Cross-Sectional-Surveys-Focused-on
 https://liqin7.hydrationforhealth.com/#/basecamp/basecamp

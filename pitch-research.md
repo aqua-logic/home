@@ -32,21 +32,28 @@ Fonte: https://pmc.ncbi.nlm.nih.gov/articles/PMC9571519/
 
 No entanto, já existem trabalhos académicos que mostram o desenvolvimento e avaliação de sensores multimodais destinados à avaliação altamente precisa da hidratação da pele, que superam as imprecisões e limitações inerentes aos métodos padrão. O sistema proposto utiliza uma abordagem multimodal, que combina sensores elétricos com sensores óticos. A técnica de bioimpedância tetrapolar é implementada para mitigar o impacto da impedância de contacto e eliminar erros associados à dupla camada elétrodo-eletrólito. Adicionalmente, o sensor ótico permite a deteção direta das bandas associadas à água. A combinação de ambas as modalidades visa aumentar a sensibilidade e a validade das medições e fornecer uma ferramenta mais robusta e abrangente para a medição do estado de desidratação da pele. 
 
-Outros estudos existentes mostram que o nível de hidratação da pele pode prever hidratações sistémicas leves com exatidão se acrescentarmos variáveis independentes como a utilização de cremes, a massa corporal e a temperatura corporal, porque reflete, em grande parte, o volume do fluido intersticial dérmico e a água retida na matriz extracelular. Esses compartimentos estão em contínuo equilíbrio com o plasma através de trocas de filtração capilar, reabsorção linfática e variações de perfusão microvascular. Alterações no volume plasmático e na osmolalidade sistémica perturbam as forças de Starling e a microcirculação dermal, provocando alterações mensuráveis no conteúdo hídrico dérmico e epidermal. Por essa razão, medidas locais da hidratação cutânea fornecem um sinal fisiologicamente fundamentado, passível de correlação com indicadores de hidratação sistémica (p.ex. variação de massa corporal e osmolalidade urinária), desde que controlados por variáveis como a utilização de cremes, humidade, contacto do sensor, massa corporal e temperatura.
+<br>
+Fonte: https://www.mdpi.com/1424-8220/24/5/1419
+<br>
+
+Outros estudos existentes mostram que o nível de hidratação da pele pode prever hidratações sistémicas leves com exatidão se acrescentarmos variáveis independentes como a utilização de cremes, a massa corporal e a temperatura corporal, porque reflete, em grande parte, o volume do fluido intersticial dérmico e a água retida na matriz extracelular. Esses compartimentos estão em contínuo equilíbrio com o plasma através de trocas de filtração capilar, reabsorção linfática e variações de perfusão microvascular. Alterações no volume plasmático e na osmolalidade sistémica perturbam as forças de Starling e a microcirculação dermal, provocando alterações mensuráveis no conteúdo hídrico dérmico e epidermal. Por essa razão, medidas locais da hidratação cutânea fornecem um sinal fisiologicamente fundamentado, passível de correlação com indicadores de hidratação sistémica (p.ex. variação de massa corporal e osmolalidade urinária), desde que controlados por variáveis como a utilização de cremes, contacto do sensor, o estado emocional do utilizador, a massa corporal e a temperatura.
 
 ### O que distingue o nosso protótipo das soluções semelhantes existentes
 <ul>
 <li>Relacionamos as medidas da hidratação da pele com a hidratação sistémica</li>
 <li>Informamos a população sobre este problema de saúde pública</li>
 <li>Monitorizamos continuamente o nível de hidratação dos utilizadores e garantir um nível de hidratação saudável</li>
-<li>Utilizamos um sensor multimodal, com uma componente elétrica, ótica e mecânica, para aumentar a precisão da medição</li>
+<li>Utilizamos um sensor multimodal, com uma componente elétrica e ótica, para aumentar a precisão da medição</li>
+<li>Provavelmente introduziremos uma componente para medir a elasticiade da pele e aumentar a precisão da medição</li>
 <li>Possivelmente utilizaremos um sensor de bioimpedância tetrapolar</li>
-<li>Possivelmente introduziremos um LED com 1450 nm para complementar a medição do LED de 970 nm</li>
-<li>Possivelmente acrescentaremos uma componente termodinâmica ao nosso sensor</li>
+<li>Consideramos introduzir um LED com 1450 nm para complementar a medição do LED de 970 nm</li>
+<li>Ainda poderemos melhorar se acrescentarmos uma componente termodinâmica ao nosso sensor</li>
 </ul>
 
 ## Ideia / protóttipo
 ### Como funciona o protótipo escolhido
+O nosso protótipo inicial será um Arduino NANO BLE ligado a um sensor de bioimpedância bipolar Grove GSR, a um LED IR de 970 nm e um fotodíodo que absorve apenas esse comprimento de onda. 
 ### Quais são as principais funcionalidades
+O protótipo está conectado a uma aplicação que comunica com o utilizador e permite melhorar continuamente o modelo. 
 ### Que melhorias poderiam ser introduzidas neste protótipo
 Reduzir as dimensões da pulseira e torná-la mais discreta e menos vulnerável a danos materiais.

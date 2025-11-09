@@ -52,7 +52,7 @@ Outros estudos existentes mostram que o nível de hidratação da pele pode prev
 
 ## Ideia / protóttipo
 ### Como funciona o protótipo escolhido
-O nosso protótipo inicial será um Arduino NANO BLE ligado a um sensor de bioimpedância bipolar Grove GSR, a um LED IR de 970 nm e um fotodíodo que absorve apenas esse comprimento de onda. 
+O nosso protótipo inicial será um Arduino NANO BLE ligado a um sensor de bioimpedância bipolar Grove GSR, a um LED IR de 970 nm e um fotodíodo que absorve apenas esse comprimento de onda. O utilizador coloca os elétrodos nos dedos 3 e 4 e a pulseira no pulso e o aparelho está pronto a realizar medições constantemente, efetuando uma média dos valores para eliminar o ruído.
 ### Quais são as principais funcionalidades
 O protótipo está conectado a uma aplicação que comunica com o utilizador e permite melhorar continuamente o modelo. 
 ### Que melhorias poderiam ser introduzidas neste protótipo

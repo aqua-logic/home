@@ -75,9 +75,10 @@ O modelo geral será treinado com regressões que relacionam resistência, coefi
   <section id="tecnologia">
     <h2>Problemas parcelares</h2>
     <ul>
-      <li style="text-align: justify;"><strong>Treino do modelo:</strong>  Equipamentos altamente precisos como um multímetro digital, sensor piezoelétrico, uma LED com comprimento de onda de 970 nanómetros, um fotodíodo e um termómetro de sonda de infravermelhos com aquisição automática de dados permitirão treinar intensivamente o nosso modelo geral de inteligência artificial. Após a recolha de 100-1000 data points, teremos uma estimativa fiável do tempo que qualquer utilizador dispendeu sem beber água e da quantidade de água que ingeriu na última hora.      
-      <li style="text-align: justify;"><strong>Desenvolvimento do protótipo da pulseira:</strong> Calibraremos um Arduino NANO BLE conectado a vários sensores de dimensões reduzidas para efetuar as mesmas medições e comunicar os dados ao telemóvel por Bluetooth.</li>
-      <li style="text-align: justify;"><strong>Desenvolvimento da aplicação móvel:</strong> Finalmente, a aplicação móvel, automaticamente conectada à pulseira, envia notificações de alerta quando o utilizador não bebe água há mais de 2 horas ou quando bebeu mais do que 1 litro na última hora e calcula uma pontuação de hidratação aproximada e o percentil relativamente aos restantes utilizadores. </li>
+      <li style="text-align: justify;"><strong>Desenvolvimento do protótipo da pulseira:</strong> Equipamentos moderadamente precisos como um sensor de bioimpedância bipolar (Grove GSR), uma LED com comprimento de onda de 970 nanómetros e um fotodíodo ligados a um Arduino NANO BLE permitirão fazer medições indiretas da resistência da pele e da absorbância desse comprimento de onda.</li>
+      <li style="text-align: justify;"><strong>Treino do modelo:</strong>  Após a recolha de 100-1000 data points, teremos uma estimativa relativamente fiável de quando o utilizador está desidratado.    
+      <li style="text-align: justify;"><strong>Desenvolvimento da aplicação móvel:</strong> Finalmente, a aplicação móvel, automaticamente conectada à pulseira, envia notificações de alerta quando deteta uma desidratação leve e calcula uma pontuação de hidratação aproximada e o percentil relativamente aos restantes utilizadores. </li>
+      <li style="text-align: justify;"><strong>Melhoria do protótipo da pulseira:</strong> Podemos acrescentar sensores de temperatura e medidores da elasticidade da pele para refinar a medição.</li>
     </ul>
   </section>
 

@@ -155,12 +155,57 @@ nav a:hover {
 
 /* Hero Section */
 #hero {
-  text-align: center;
-  padding: 6em 2em;
-  background: linear-gradient(135deg, #82ccdd, #60a3bc);
-  color: #fff;
   position: relative;
   overflow: hidden;
+  height: 40vh;            /* adjust to taste: 60vh / 100vh etc. */
+  min-height: 420px;       /* prevents hero from getting too short on wide screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* VIDEO: fill hero and crop if needed */
+.video-bg {
+  position: absolute;
+  inset: 0;                /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* <-- the key: covers area while preserving aspect ratio */
+  object-position: center; /* center the focal point */
+  z-index: 0;
+  pointer-events: none;    /* prevents clicks on video from interfering */
+  background: #000;        /* fallback while loading */
+}
+
+/* dark overlay to keep text readable */
+#hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+/* content above video */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  #hero { height: 65vh; }
+  .hero-content { padding: 1.25rem; }
+}
+
+@media (max-width: 520px) {
+  #hero { height: 55vh; min-height: 320px; }
+  .site-title { font-size: 1rem; }
+  .hero-content h2 { font-size: 1.6rem; }
 }
 
 #hero h2 {
@@ -439,4 +484,4 @@ nav h1 {
   line-height: 1.4;
   color: #555;
 }
-
+.logo-inline {border-radius:10px; width: 48px; vertical-align: middle; margin-right: 8px; }

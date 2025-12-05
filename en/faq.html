@@ -10,8 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Navegação (idêntica ao index.html) -->
- <header>
+<header>
     <nav>
          <details class="lang-dropdown">
   <summary class="lang-btn">
@@ -21,7 +20,6 @@
   </summary>
 
   <div class="lang-menu" role="menu">
-    <!-- Fixed links — edit these per-page if you need path-preservation -->
     <a class="lang-link"  href="/home/en/faq.html" role="menuitem">🇬🇧 English</a>
     <a class="lang-link" href="/home/faq.html" role="menuitem">🇵🇹 Português</a>
   </div>
@@ -42,23 +40,17 @@
     </nav>
   </header>
 
-
-<!-- Main content: translated from the .md file, everything else kept the same -->
 <main id="faq">
 <section class="section-content">
 <h2>Frequently Asked Questions</h2>
 
-
 <h3>Problem</h3>
-
 
 <h4>What problem does this project aim to solve?</h4>
 <p>Prevent dehydration across all age groups and minimize the environmental impacts of excessive water consumption, such as the production and transport of plastic bottled water.</p>
 
-
 <h4>Why is this problem relevant today?</h4>
-<p>OMS recommends us to drink 2 liters of water a day. However, a joint study from the Liq.In7 initiative, which included 3,611 children, 8,109 adolescents and 16,276 adults across 15 countries, found that more than half of the population does not reach the recommended average fluid intake for their age group. Although many meet fluid intake recommendations, several studies consistently associate mild dehydration with:</p>
-
+<p>The WHO recommends drinking around 2 liters of water per day. However, a joint study from the Liq.In7 initiative, which included 3,611 children, 8,109 adolescents and 16,276 adults across 15 countries, found that more than half of the population does not reach the recommended average fluid intake for their age group. Although many meet fluid intake recommendations, several studies consistently associate mild dehydration with:</p>
 
 <ul>
 <li>Reduced endurance performance in athletes</li>
@@ -69,86 +61,71 @@
 </ul>
 <br>
 <iframe style="border-radius:20px; border: 20px dashed black" width="100%" height="800px" src="https://liqin7.hydrationforhealth.com/#/basecamp/basecamp"></iframe>
-<p>On the other hand, in the Portuguese market, 911 million plastic containers were produced for the sale of bottled water nationwide, and each bottle has a carbon footprint of 85 grams of CO₂. Nevertheless, between 2014 and 2019, per-capita bottled water consumption increased by about 30%.</p>
-
+<p>In the Portuguese market, 911 million plastic containers were produced for the sale of bottled water nationwide, and each bottle has a carbon footprint of 85 grams of CO₂. Additionally, between 2014 and 2019, per-capita bottled water consumption increased by about 30%.</p>
 
 <hr>
 
-
 <h3>Existing solutions</h3>
 
-
 <h4>What other similar solutions exist?</h4>
-<p>Some studies show that skin hydration levels can predict mild systemic dehydration accurately, because skin hydration largely reflects the volume of dermal interstitial fluid and water retained in the extracellular matrix. These compartments are in continuous equilibrium with plasma through capillary filtration, lymphatic reabsorption and changes in microvascular perfusion. Changes in plasma volume and systemic osmolality disturb Starling forces and dermal microcirculation, causing measurable changes in dermal and epidermal water content. For this reason, local skin hydration measures provide a physiologically grounded signal that can correlate with systemic hydration indicators (e.g., body-mass change and urine osmolality), provided variables such as cream use, sensor contact, the user’s emotional state, body mass and temperature are controlled.</p>
+<p>Some studies show that skin hydration levels can predict mild systemic dehydration accurately, because skin hydration largely reflects the volume of dermal interstitial fluid and water retained in the extracellular matrix. These compartments are in continuous equilibrium with plasma through capillary filtration, lymphatic reabsorption and changes in microvascular perfusion. Changes in plasma volume and systemic osmolality disturb Starling forces and dermal microcirculation, causing measurable changes in dermal and epidermal water content. For this reason, local skin hydration measures provide a physiologically grounded signal that can correlate with systemic hydration indicators (e.g., body-mass change and urine osmolality), provided variables such as cream use, sensor contact, emotional state, body mass and temperature are controlled.</p>
 
-
-<p>The most common device for assessing skin hydration is the corneometer, which measures the electrical properties of the skin (bioimpedance) that vary with water content. This instrument typically uses a two-electrode (bipolar) configuration applied to the skin, which is subject to contact errors because the electrode–electrolyte double layer introduces a contact impedance that significantly affects the measured value. Another category of traditional unimodal methods is optical sensing. Detecting absorbance at bands that coincide with water absorption peaks, especially at 970 nm and 1450 nm, allows an indirect measurement of water content. While the 1450 nm wavelength has stronger water absorption, it has less penetration power in the skin and greater sensitivity to scattering than 970 nm. Therefore, combining the two wavelengths can provide a confident estimate of superficial water content. Other instruments have measured additional physical properties such as skin elasticity and specific heat to relate to skin water content.</p>
-
+<p>The most common device for assessing skin hydration is the corneometer, which measures the electrical properties of the skin (bioimpedance). This instrument typically uses a two-electrode (bipolar) configuration applied to the skin, which is subject to contact errors because the electrode–electrolyte double layer introduces a contact impedance that significantly affects the measured value. Another category of traditional unimodal methods is optical sensing. Detecting absorbance at bands that coincide with water absorption peaks, especially at 970 nm and 1450 nm, allows an indirect measurement of water content. While the 1450 nm wavelength has stronger water absorption, it has less penetration power in the skin and greater sensitivity to scattering than 970 nm. Therefore, combining the two wavelengths can provide a confident estimate of superficial water content. Other instruments have measured additional physical properties such as skin elasticity and specific heat to relate to skin water content.</p>
 
 <p><img src="timeline.png" alt="timeline"></p>
 <p>Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9571519/">PMC9571519</a></p>
 
-
-<p>However, there are academic works that present the development and evaluation of multimodal sensors aimed at highly accurate assessment of skin hydration, overcoming the inaccuracies and limitations of standard methods. The proposed system uses a multimodal approach that combines electrical and optical sensors. The tetrapolar bioimpedance technique is implemented to mitigate the impact of contact impedance and eliminate errors associated with the electrode–electrolyte double layer. Additionally, the optical sensor enables direct detection of water-related bands. Combining both modalities aims to increase sensitivity and measurement validity, providing a more robust and comprehensive tool for assessing skin dehydration status.</p>
-
+<p>However, some academic works present multimodal sensors for highly accurate assessment of skin hydration, overcoming the inaccuracies and limitations of standard methods. These systems combine electrical and optical sensors, frequently implementing tetrapolar bioimpedance to minimize the impact of contact impedance and errors associated with the electrode–electrolyte double layer, while optical sensors detect water-related absorption bands directly.</p>
 
 <p>Source: <a href="https://www.mdpi.com/1424-8220/24/5/1419">MDPI - Sensors</a></p>
-
-
 
 <h4>What sets our prototype apart from similar existing solutions?</h4>
 <ul>
 <li>We relate skin hydration measurements to systemic hydration</li>
 <li>We raise public awareness about this public health issue</li>
-<li>We continuously monitor users’ hydration level and help ensure a healthy hydration status</li>
-<li>We use a multimodal sensor with electrical and optical components to increase measurement accuracy</li>
-<li>We will likely introduce a component to measure skin elasticity to further improve accuracy</li>
-<li>We may use a tetrapolar bioimpedance sensor</li>
-<li>We are considering adding a 1450 nm LED to complement the 970 nm LED measurement</li>
-<li>We could further improve the system by adding a thermodynamic component to the sensor</li>
+<li>We continuously monitor users’ hydration levels</li>
+<li>We use a multimodal sensor to increase measurement accuracy</li>
+<li>We may introduce a component for measuring skin elasticity</li>
+<li>We may use tetrapolar bioimpedance</li>
+<li>We are considering adding a 1450 nm LED to complement the 970 nm measurement</li>
+<li>We may add a thermodynamic component</li>
 </ul>
-
 
 <hr>
 
-
 <h3>Prototype</h3>
 
+<h4>How the prototype works</h4>
+<p>Our initial prototype uses an Arduino NANO BLE connected to a Grove GSR bipolar bioimpedance sensor, a 970 nm IR LED and a photodiode. The user places electrodes on fingers 3 and 4 and wears the wristband; the device performs continuous measurements and averages values to reduce noise.</p>
 
-<h4>How the chosen prototype works</h4>
-<p>Our initial prototype will be an Arduino NANO BLE connected to a Grove GSR bipolar bioimpedance sensor, a 970 nm IR LED and a photodiode that detects only that wavelength. The user places electrodes on fingers 3 and 4 and wears the wristband; the device will then perform continuous measurements, averaging values to reduce noise.</p>
+<h4>Main features</h4>
+<p>The prototype connects to an application that communicates with the user and improves the model continuously.</p>
 
+<h4>What improvements could be introduced?</h4>
+<p>Reduce the size of the wristband to make it more discreet and resistant.</p>
 
-<h4>What are the main features</h4>
-<p>The prototype is connected to an application that communicates with the user and continuously improves the model.</p>
-
-
-<h4>What improvements could be introduced to this prototype</h4>
-<p>Reduce the wristband size to make it more discreet and less vulnerable to material damage.</p>
-
-
+<hr>
+<section id="references" style="padding:40px">
+<h3>References</h3>
+<ol>
+<li>Gidado, I. M., Qassem, M., Triantis, I. F., & Kyriacou, P. A. (2022). <i>Review of advances in the measurement of skin hydration based on sensing of optical and electrical tissue properties</i>. <i>Sensors, 22</i>(19), 7151. https://doi.org/10.3390/s22197151</li>
+<li>Gidado, I. M., Nwokoye, I. I., Triantis, I. F., Qassem, M., & Kyriacou, P. A. (2024). <i>Multi‑Modal Spectroscopic Assessment of Skin Hydration</i>. <i>Sensors, 24</i>(5), 1419. https://doi.org/10.3390/s24051419</li>
+</ol>
+</section>
 </section>
 </main>
 
-
-<!-- Footer identical to index.html -->
 <footer>
 <p>&copy; 2025 Aqualogic Project</p>
 </footer>
-
-
-<!-- JavaScript identical to index.html -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('nav-links');
 
-
 burger.addEventListener('click', () => {
 navLinks.classList.toggle('active');
 });
 </script>
-
-
 </body>
 </html>

@@ -80,7 +80,7 @@
   Your browser does not support the video tag.
 </video>
 
-<div id="unmuteBtn" class="unmute-overlay" title="Turn sound on">🔊</div>
+<div id="unmuteBtn" class="unmute-overlay" title="Turn sound on">🔇</div>
   </section>
 
   <!-- Sobre -->
@@ -218,6 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
     video.play();
     btn.style.display = 'none';
   });
+  btn.addEventListener('click', () => { video.muted = !video.muted; video.play(); btn.textContent = video.muted ? "🔇" : "🔊"; });
 });
 </script>
 </body>

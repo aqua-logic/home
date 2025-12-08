@@ -76,11 +76,12 @@
 
   <!-- Hero -->
  <section id="hero">
-  <video autoplay loop playsinline class="video-bg" preload="metadata" poster="hero-poster.jpg">
-    <source src="video.mp4" type="video/mp4">
-    <!-- fallback -->
-    Your browser does not support the video tag.
-  </video>
+ <video id="heroVideo" autoplay loop muted playsinline class="video-bg" preload="metadata" poster="hero-poster.jpg">
+  <source src="video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div id="unmuteBtn" class="unmute-overlay" title="Turn sound on">🔊</div>
 </section>
 
   <!-- Sobre -->

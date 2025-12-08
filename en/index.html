@@ -209,13 +209,15 @@ This project aligns with SDGs 3, 6, and 12 by promoting health and well-being th
   </script>
 
 <script>
-const video = document.getElementById('heroVideo');
-const btn = document.getElementById('unmuteBtn');
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('heroVideo');
+  const btn = document.getElementById('unmuteBtn');
 
-btn.addEventListener('click', () => {
-  video.muted = false;
-  video.play();
-  btn.style.display = 'none'; // hide button after unmuting
+  btn.addEventListener('click', () => {
+    video.muted = false;
+    video.play();
+    btn.style.display = 'none';
+  });
 });
 </script>
 </body>

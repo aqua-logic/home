@@ -25,6 +25,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+  z-index: 20;
   background: rgba(0,0,0,0.5);
   color: white;
   font-size: 24px;
@@ -214,11 +215,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('unmuteBtn');
 
   btn.addEventListener('click', () => {
-    video.muted = false;
-    video.play();
-    btn.style.display = 'none';
-  });
-  btn.addEventListener('click', () => { video.muted = !video.muted; video.play(); btn.textContent = video.muted ? "🔇" : "🔊"; });
+  video.muted = !video.muted;
+  // ensure play() is attempted and ignore promise rejection
+  video.play().catch(() => {});
+  btn.textContent = video.muted ? "🔇" : "🔊";
+  console.log('unmute toggle:', !video.muted);
+});
 });
 </script>
 </body>

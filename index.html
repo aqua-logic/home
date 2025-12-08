@@ -214,14 +214,16 @@ a trabalhar no desenvolvimento do projeto Aqualogic como parte das disciplinas e
     });
 
   </script>
-  <script>
-const video = document.getElementById('heroVideo');
-const btn = document.getElementById('unmuteBtn');
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('heroVideo');
+  const btn = document.getElementById('unmuteBtn');
 
-btn.addEventListener('click', () => {
-  video.muted = false;
-  video.play();
-  btn.style.display = 'none'; // hide button after unmuting
+  btn.addEventListener('click', () => {
+    video.muted = false;
+    video.play();
+    btn.style.display = 'none';
+  });
 });
 </script>
 </body>
